@@ -1,5 +1,6 @@
 # [Rooted node tree][wiki source]
 
+`go mod init github.com/rafaelpardor/rooted_note_tree_golang`
 
 ## Resources
 
