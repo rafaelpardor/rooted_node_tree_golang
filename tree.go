@@ -4,14 +4,24 @@ type Node interface {
 	Children() []Node
 }
 
-type Node struct {
-	ChildFirst *Node
-	ChildLast  *Node
-	SibLeft    *Node
-	SibRight   *Node
+type node struct {
+	parent *node
+	first  *node
+	last   *node
+	left   *node
+	right  *node
 }
 
-func (n *Node) Childer() []*Node {
-	// Todo
+// New is a new shorted way to write NewNode
+func New() *node { return NewNode() }
+
+// NewNode returns a struct that fulfills the Node Interface
+func NewNode() *node {
+	return new(node)
+}
+
+// Children return a slice of all inmediate children, not grantchildren.
+func (n *node) Children() []*node {
+	// TODO
 	return nil
 }
